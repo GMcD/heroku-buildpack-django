@@ -53,8 +53,7 @@ for dir in $VIRTUALENV_DIRS; do
 done
 
 # Check gdal-config
-echo "-----> Checking GDAL config..."
-gdal-config
+echo "-----> Not Checking GDAL config..."
 
 # Create virtualenv. Rebuild if corrupt.
 set +e
