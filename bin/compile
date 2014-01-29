@@ -83,8 +83,8 @@ source bin/activate
 
 # Check gdal-config
 echo "-----> Adding GDAL config..."
-PATH=/app/vendor/gdal/1.10.0/bin:$PATH
-echo $PATH
+PATH=$CACHE_DIR/vendor/gdal/1.10.0/bin:$PATH
+env
 echo "-----> Adding GDAL config..."
 
 # Install mercurial, if needed.
