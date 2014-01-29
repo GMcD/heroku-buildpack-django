@@ -86,6 +86,7 @@ echo "-----> Adding GDAL config..."
 PATH=$CACHE_DIR/vendor/gdal/1.10.0/bin:$PATH
 ln -s $CACHE_DIR/vendor/gdal /app/vendor/gdal
 ln -s $CACHE_DIR/vendor/gdal/1.10.0/include /app/vendor/gdal/include
+ln -s $CACHE_DIR/vendor/gdal/1.10.0/lib /app/vendor/gdal/lib
 echo "-----> Added GDAL config..."
 
 # Install mercurial, if needed.
