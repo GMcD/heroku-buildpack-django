@@ -4,7 +4,7 @@
 set -eo pipefail
 
 # Prepend proper path for virtualenv hackery. Will be deprecated soon.
-export PATH=:/app/vendor/gdal/1.10.0/bin:/usr/local/bin:$PATH
+export PATH=:/usr/local/bin:$PATH
 
 BIN_DIR=$(cd $(dirname $0); pwd) # absolute path
 ROOT_DIR=$(dirname $BIN_DIR)
@@ -52,9 +52,6 @@ for dir in $VIRTUALENV_DIRS; do
   cp -R $CACHE_DIR/$dir . &> /dev/null || true
 done
 
-# Check gdal-config
-echo "-----> Not Checking GDAL config..."
-
 # Create virtualenv. Rebuild if corrupt.
 set +e
 echo "-----> Preparing virtualenv version $(virtualenv --version)"
@@ -83,6 +80,11 @@ source $BIN_DIR/steps/pylibmc
 # Activate the virtualenv.
 echo "-----> Activating virtualenv"
 source bin/activate
+
+# Check gdal-config
+echo "-----> Adding GDAL config..."
+PATH=/app/vendor/gdal/1.10.0/bin:$PATH
+echo $PATH
 
 # Install mercurial, if needed.
 if (grep -Fiq "hg+" requirements.txt) then
