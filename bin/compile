@@ -84,8 +84,9 @@ source bin/activate
 # Check gdal-config
 echo "-----> Adding GDAL config..."
 PATH=$CACHE_DIR/vendor/gdal/1.10.0/bin:$PATH
-CPATH=$CACHE_DIR/vendor/gdal/1.10.0/include
-echo "-----> Adding GDAL config..."
+ln -s $CACHE_DIR/vendor/gdal /app/vendor/gdal
+ln -s $CACHE_DIR/vendor/gdal/1.10.0/include /app/vendor/gdal/include
+echo "-----> Added GDAL config..."
 
 # Install mercurial, if needed.
 if (grep -Fiq "hg+" requirements.txt) then
