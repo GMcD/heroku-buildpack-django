@@ -84,6 +84,7 @@ source bin/activate
 # Check gdal-config
 echo "-----> Adding GDAL config..."
 PATH=$CACHE_DIR/vendor/gdal/1.10.0/bin:$PATH
+CFLAGS=$CACHE_DIR/vendor/proj/4.8.0/include
 ln -s -f -v $CACHE_DIR/vendor/gdal /app/vendor/gdal
 ln -s -f -v $CACHE_DIR/vendor/gdal/1.10.0/include /app/vendor/gdal/include
 ln -s -f -v $CACHE_DIR/vendor/gdal/1.10.0/lib /app/vendor/gdal/lib
