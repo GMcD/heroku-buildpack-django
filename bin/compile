@@ -85,11 +85,11 @@ source bin/activate
 echo "-----> Adding GDAL config and PySpatialite flags..."
 # PATH=$CACHE_DIR/vendor/gdal/1.10.0/bin:$PATH
 ln -s -f -v $CACHE_DIR/vendor/proj /app/vendor/proj
-ln -s $CACHE_DIR/vendor/proj/4.8.0/include /app/vendor/proj/include
-ln -s $CACHE_DIR/vendor/proj/4.8.0/lib /app/vendor/proj/lib
+ln -s -f $CACHE_DIR/vendor/proj/4.8.0/include /app/vendor/proj/include
+ln -s -f $CACHE_DIR/vendor/proj/4.8.0/lib /app/vendor/proj/lib
 ln -s -f -v $CACHE_DIR/vendor/geos /app/vendor/geos
-ln -s $CACHE_DIR/vendor/geos/3.4.1/include /app/vendor/geos/include
-ln -s $CACHE_DIR/vendor/geos/3.4.1/lib /app/vendor/geos/lib
+ln -s -f $CACHE_DIR/vendor/geos/3.4.1/include /app/vendor/geos/include
+ln -s -f $CACHE_DIR/vendor/geos/3.4.1/lib /app/vendor/geos/lib
 # GDAL
 ln -s -f -v $CACHE_DIR/vendor/gdal /app/vendor/gdal
 ln -s -f -v $CACHE_DIR/vendor/gdal/1.10.0/include /app/vendor/gdal/include
