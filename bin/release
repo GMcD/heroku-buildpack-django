@@ -10,10 +10,12 @@ cat <<EOF
 config_vars:
   PATH: bin:node_modules/.bin:/app/bin:/usr/local/bin:/usr/bin:/bin
   PYTHONUNBUFFERED: true
-  LIBRARY_PATH: .heroku/vendor/lib
-  LD_LIBRARY_PATH: .heroku/vendor/lib
   LANG: en_US.UTF-8
 EOF
+
+  # These override the defaults from heroku-geo-buildpack ... 
+  # LIBRARY_PATH: .heroku/vendor/lib
+  # LD_LIBRARY_PATH: .heroku/vendor/lib
 
 
 [ "$NAME" = "Python/Django" ] || exit 0
