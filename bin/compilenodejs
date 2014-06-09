@@ -119,7 +119,9 @@ declare -A engine_versions
 declare -A engine_defaults
 declare -A engine_requests
 
+# http://heroku-buildpack-nodejs.s3.amazonaws.com/manifest.nodejs
 engine_defaults["node"]="0.10.21"
+# http://heroku-buildpack-nodejs.s3.amazonaws.com/manifest.npm
 engine_defaults["npm"]="1.3.11"
 
 engine_versions["node"]=$(manifest_versions "nodejs")
