@@ -98,6 +98,7 @@ ln -s -f -v $CACHE_DIR/vendor/gdal/1.11.0/bin /app/vendor/gdal/bin
 export PATH=:/app/vendor/gdal/bin:$PATH
 export LIBRARY_PATH=/app/vendor/gdal/lib
 export CPLUS_INCLUDE_PATH=/app/vendor/gdal/include
+export C_INCLUDE_PATH=/app/vendor/gdal/include
 echo "-----> Added GDAL config, PATH and PySpatialite flags..."
 
 # Install mercurial, if needed.
