@@ -95,7 +95,8 @@ ln -s -f -v $CACHE_DIR/vendor/gdal /app/vendor/gdal
 ln -s -f -v $CACHE_DIR/vendor/gdal/1.11.0/include /app/vendor/gdal/include
 ln -s -f -v $CACHE_DIR/vendor/gdal/1.11.0/lib /app/vendor/gdal/lib
 ln -s -f -v $CACHE_DIR/vendor/gdal/1.11.0/bin /app/vendor/gdal/bin
-echo "-----> Added GDAL config and PySpatialite flags..."
+export PATH=:/app/vendor/gdal/bin:$PATH
+echo "-----> Added GDAL config, PATH and PySpatialite flags..."
 
 # Install mercurial, if needed.
 if (grep -Fiq "hg+" requirements.txt) then
