@@ -92,8 +92,8 @@ ln -s -f $CACHE_DIR/vendor/geos/3.4.1/include /app/vendor/geos/include
 ln -s -f $CACHE_DIR/vendor/geos/3.4.1/lib /app/vendor/geos/lib
 # GDAL
 ln -s -f -v $CACHE_DIR/vendor/gdal /app/vendor/gdal
-ln -s -f -v $CACHE_DIR/vendor/gdal/1.10.0/include /app/vendor/gdal/include
-ln -s -f -v $CACHE_DIR/vendor/gdal/1.10.0/lib /app/vendor/gdal/lib
+ln -s -f -v $CACHE_DIR/vendor/gdal/1.11.0/include /app/vendor/gdal/include
+ln -s -f -v $CACHE_DIR/vendor/gdal/1.11.0/lib /app/vendor/gdal/lib
 echo "-----> Added GDAL config and PySpatialite flags..."
 
 # Install mercurial, if needed.
